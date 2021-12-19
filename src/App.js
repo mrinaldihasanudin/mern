@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./assets/scss/style.scss";
 function App() {
   return (
-    <div>
+    <div className="font-body">
       <Router>
         <Route path="/" component={LandingPage}></Route>
       </Router>

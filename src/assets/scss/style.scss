@@ -43,6 +43,10 @@
 @import "utilities";
 @import "print";
 
+.font-body {
+  font-family: "Poppins", sans-serif;
+}
+
 .brand-text-icon {
   font-size: 26px;
   font-weight: 500;
@@ -55,6 +59,7 @@
 }
 
 header {
+  margin-bottom: 70px;
   border-bottom: 1px solid $gray-200;
   width: 100%;
   position: relative;
