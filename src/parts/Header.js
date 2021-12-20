@@ -4,11 +4,11 @@ import IconText from "./IconText";
 
 export default function Header(props) {
   const getNavLinkClass = (path) => {
-    return props.location.pathname === path ? "active" : "";
+    return props.location.pathname === path ? " active" : "";
   };
   return (
     <header className="spacing-sm">
-      <div className="container">
+      <div className="container" style={{ padding: 0 }}>
         <nav className="navbar navbar-expand-lg navbar-light">
           <IconText />
           <div className="collapse navbar-collapse">
