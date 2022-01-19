@@ -6,7 +6,7 @@ import treasures from "../assets/images/ic_treasure.svg";
 import picture from "../assets/images/picture.jpg";
 import frame from "../assets/images/frame.jpg";
 import Button from "../elements/Button";
-import numberFormat from "../utils/NumberingFormat";
+import numberFormat from "../utils/formatNumber";
 import Fade from "react-reveal/Fade";
 
 export default function Hero(props) {
@@ -68,10 +68,13 @@ export default function Hero(props) {
             <img src={traveler} alt={`${props.data.travelers} Travelers`} />
             <h6 className="mt-3">
               {numberFormat(props.data.travelers)}
-              <span className="text-gray-500 font-weight-light">Travelers</span>
+              <span className="text-gray-500 font-weight-light">
+                {" "}
+                Travelers
+              </span>
             </h6>
           </div>
-          <div className="col-auto" style={{ marginLeft: 35 }}>
+          <div className="col-auto" style={{ marginLeft: 35, marginRight: 35 }}>
             <img src={treasures} alt={`${props.data.treasures} Treasure`} />
             <h6 className="mt-3">
               {numberFormat(props.data.treasures)}
@@ -81,7 +84,7 @@ export default function Hero(props) {
               </span>
             </h6>
           </div>
-          <div className="col-auto" style={{ marginLeft: 35 }}>
+          <div className="col-auto">
             <img src={cities} alt={`${props.data.cities} Cities`} />
             <h6 className="mt-3">
               {numberFormat(props.data.cities)}

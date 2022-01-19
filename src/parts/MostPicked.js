@@ -2,14 +2,14 @@ import React from "react";
 import Button from "../elements/Button";
 import Fade from "react-reveal/Fade";
 
-export default function MostPicked(props) {
+export default function MostPicked({ data, refMostPicked }) {
   return (
-    <section className="container" ref={props.refMostPicked}>
+    <section className="container" ref={refMostPicked}>
       <Fade bottom>
         <h4 className="mb-3">Most Picked</h4>
 
         <div className="container-grid">
-          {props.data.map((item, index) => {
+          {data.map((item, index) => {
             return (
               <div
                 key={`mostpicked-${index}`}

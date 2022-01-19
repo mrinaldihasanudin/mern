@@ -1,11 +1,17 @@
 import LandingPage from "./pages/LandingPage";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import DetailsPage from "./pages/DetailsPage";
+import Example from "./pages/Example";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./assets/scss/style.scss";
 function App() {
   return (
     <div className="font-body">
       <Router>
-        <Route path="/" component={LandingPage}></Route>
+        <Switch>
+          <Route exact path="/" component={LandingPage}></Route>
+          <Route exact path="/properties/:id" component={DetailsPage}></Route>
+          <Route path="/example" component={Example}></Route>
+        </Switch>
       </Router>
     </div>
   );
